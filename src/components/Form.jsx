@@ -94,10 +94,7 @@ const Form = () => {
     }
     const schema = yup.object({
         name:yup.string().required(),
-        email:yup.string().required().matches(
-            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-            "It should be a proper email"
-          ),
+        email:yup.string().required(),
         phone:yup.string().required().min(10, 'Must be exactly 10 digits')
         .max(10, 'Must be exactly 10 digits')
     }).required();
