@@ -93,11 +93,12 @@ const Form = () => {
         console.log(data);
     }
     const schema = yup.object({
-        name:yup.string().required(),
-        email:yup.string().required(),
-        phone:yup.string().required().min(10, 'Must be exactly 10 digits')
-        .max(10, 'Must be exactly 10 digits')
-    }).required();
+        name: yup.string().required(),
+    email:yup.string().required(),
+    phone:yup.string().required().min(10, 'Must be exactly 10 digits')
+    .max(10, 'Must be exactly 10 digits')
+  
+  }).required();
     
     const {register, handleSubmit, formState:{errors}} = useForm({
         resolver:yupResolver(schema)

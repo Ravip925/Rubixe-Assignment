@@ -21,11 +21,12 @@ const Desc = styled.p`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-  margin: 20px 20px 20px 20px;
+  margin: 15px 20px 20px 20px;
 
 `;
 const Title = styled.h2`
-  margin-bottom: 30px;
+    margin-top: 30px;
+  margin-bottom: 10px;
 `;
 const Title2 = styled.h3`
   margin-bottom: 30px;
@@ -49,6 +50,7 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  margin-top: 15px;
 `;
 
 const Footer = () => {
@@ -77,7 +79,7 @@ const Footer = () => {
         </List>
       </Center>
       <Right>
-        <Title>Address</Title>
+        <Title2>Address</Title2>
         <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur voluptate similique, iure vel id aliquid cum inventore saepe, necessitatibus, aut ducimus repellendus debitis impedit unde earum illum dolorem repudiandae! Inventore!</Desc>
         
       </Right>
