@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import {useForm} from 'react-hook-form'
+import {yupResolver} from '@hookform/resolvers/yup';
+import * as yup from 'yup'
 
 const Container = styled.div`
   height: 65vh;
@@ -82,7 +85,26 @@ const Button = styled.button`
     cursor: pointer;
 `;
 
+
 const Form = () => {
+
+    const onSubmit=(data)=>{
+
+        console.log(data);
+    }
+    const schema = yup.object({
+        name:yup.string().required(),
+        email:yup.string().required().matches(
+            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+            "It should be a proper email"
+          ),
+        phone:yup.string().required().min(10, 'Must be exactly 10 digits')
+        .max(10, 'Must be exactly 10 digits')
+    }).required();
+    
+    const {register, handleSubmit, formState:{errors}} = useForm({
+        resolver:yupResolver(schema)
+    })
 
     
   return (
@@ -98,15 +120,20 @@ const Form = () => {
                 <Divider></Divider>
             </Center>
             <Right>
+                <form onSubmit={handleSubmit(onSubmit)}>
                 <FormContainer>
                     <Label>Name*</Label>
-                    <Input placeholder="Enter Your Name"></Input>
-                    <Label>Email*</Label>
-                    <Input placeholder="Enter Your Email"></Input>
-                    <Label>Phone Number*</Label>
-                    <Input placeholder="Enter Your Number"></Input>
-                    <Button>Register Now</Button>
-                </FormContainer>
+                        <Input type={'text'} {...register("name")} placeholder="Enter Your Name"></Input>
+                        <span style={{color:"red"}}>{errors.name?.message}</span>
+                        <Label>Email*</Label>
+                        <Input type={'email'} {...register("email")} placeholder="Enter Your Email"></Input>
+                        <span style={{color:"red"}}>{errors.email?.message}</span>
+                        <Label>Phone Number*</Label>
+                        <Input type={'number'} {...register("phone")} placeholder="Enter Your Number"></Input>
+                        <span style={{color:"red"}}>{errors.phone?.message}</span>
+                        <Button type="submit">Register Now</Button>
+                    </FormContainer>
+                </form>
             </Right>
             
       </Wrapper>
