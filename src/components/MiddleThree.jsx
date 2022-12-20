@@ -153,19 +153,19 @@ const MiddleThree = () => {
           </Items>
           <Items style={item3}>
           <P style={P1a}></P>
-            <Boxes style={box1}>01</Boxes>
+            <Boxes style={box1}>03</Boxes>
             <Boxes style={box2}></Boxes>
             <Boxes style={box3}>Introducing Ai to children in an age appropriate manner</Boxes>
           </Items>
           <Items style={item4}>
-          <Boxes style={box2a}>02</Boxes>
+          <Boxes style={box2a}>04</Boxes>
             <Boxes style={box3}>Introducing Ai to children in an age appropriate manner</Boxes>
             <Boxes style={box2b}></Boxes>
             <P style={P2a}></P>
           </Items>
           <Items style={item5}>
           <P style={P1a}></P>
-            <Boxes style={box1}>01</Boxes>
+            <Boxes style={box1}>05</Boxes>
             <Boxes style={box2}></Boxes>
             <Boxes style={box3}>Introducing Ai to children in an age appropriate manner</Boxes>
           </Items>
