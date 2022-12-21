@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  height: 60vh;
+  height: 72vh;
   display: flex;
   align-items: center;
+  background-color: #f1f1f1;
 `;
 
 const InnerContainer = styled.div`
@@ -25,6 +26,7 @@ const Wrapper = styled.div`
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  
 `;
 const Items = styled.div`
     width: 15.3vw;
@@ -35,6 +37,7 @@ const Items = styled.div`
     align-items: center;
     justify-content: space-around;
     position: relative;
+    
 `;
 
 const Boxes = styled.div`
@@ -65,27 +68,44 @@ const P2a={
 const item1={
     borderTopLeftRadius:"20px",
     borderTopRightRadius:"20px",
-    boxShadow:"3px 0 10px rgba(0,0,0,0.5)"
+    position:"relative",
+    zIndex:"7",
+    boxShadow:"5px -5px 5px rgba(0,0,0,0.2)",
+    background: "linear-gradient(to bottom, #ffffff 0%, #ffffff 34.48%, #f1f1f1 100%)"
 }
 const item2={
+    marginTop:"15px",
+    position:"relative",
+    zIndex:"6",
     borderBottomLeftRadius:"20px",
     borderBottomRightRadius:"20px",
-    boxShadow:"3px 0 10px rgba(0,0,0,0.5)"
+    boxShadow:"5px 5px 3px rgba(0,0,0,0.3)",
+    background: "linear-gradient(to top, #ffffff 0%, #ffffff 34.48%, #f1f1f1 100%)"
 }
 const item3={
+    position:"relative",
+    zIndex:"5",
     borderTopLeftRadius:"20px",
     borderTopRightRadius:"20px",
-    boxShadow:"3px 0 10px rgba(0,0,0,0.5)"
+    boxShadow:"5px -5px 5px rgba(0,0,0,0.2)",
+    background: "linear-gradient(to bottom, #ffffff 0%, #ffffff 34.48%, #f1f1f1 100%)"
 }
 const item4={
+    position:"relative",
+    zIndex:"4",
+    marginTop:"15px",
     borderBottomLeftRadius:"20px",
     borderBottomRightRadius:"20px",
-    boxShadow:"3px 0 10px rgba(0,0,0,0.5)"
+    boxShadow:"5px 5px 3px rgba(0,0,0,0.3)",
+    background: "linear-gradient(to top, #ffffff 0%, #ffffff 34.48%, #f1f1f1 100%)"
 }
 const item5={
+    position:"relative",
+    zIndex:"3",
     borderTopLeftRadius:"20px",
     borderTopRightRadius:"20px",
-    boxShadow:"3px 0 10px rgba(0,0,0,0.5)"
+    boxShadow:" -1px -5px 3px rgba(0,0,0,0.15)",
+    background: "linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #f1f1f1 100%)"
 }
 
 const box1={
